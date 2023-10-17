@@ -1,0 +1,35 @@
+.menu-item{
+    display: inline-block;
+    color: #fff;
+}
+.navigator{
+    background-color: darkgoldenrod;
+    padding: 10px;
+    width: 100%;
+}
+.foot{
+    background-color: black;
+  
+}
+.nav{
+    color: #e21010;
+    
+}
+
+.para-tit{
+    text-align: center;
+    font-weight: bold;
+}
+.footer-copy{
+    text-align: center;
+    color: #fff;
+}
+.foot-row{
+    background-color: black;
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+    padding: 50px
+}
+
+
