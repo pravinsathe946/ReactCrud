@@ -1,17 +1,15 @@
-import { Table } from 'semantic-ui-react'
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { Button } from 'semantic-ui-react';
+import { Button, Table } from 'semantic-ui-react';
 export default function Read() { 
    
-const [APIData, setAPIData, data] = useState([]);
+const [APIData, setAPIData] = useState([]);
 useEffect(() => {
     axios.get(`https://651ef88f44a3a8aa476945fe.mockapi.io/fakeapi`)
     .then((response) => {
         setAPIData(response.data);
     })
-       //eslint-disable-next-line react-hooks/exhaustive-deps   
 }, [])
 const setData = (data) => {
     let { id, firstName, lastName, checkbox } = data;
@@ -37,12 +35,7 @@ const getData = () => {
          })
 }
   
-//   const getData = () => {
-//     axios.get(`https://651ef88f44a3a8aa476945fe.mockapi.io/fakeapi`)
-//         .then((getData) => {
-//              setAPIData(getData.data);
-//          })
-// }
+
     return (
        <>
         <div>
@@ -105,23 +98,7 @@ const getData = () => {
             </Table>
      
         </div>
-        {/* <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div className="modal-dialog" role="document">
-    <div className="modal-content">
-     
-      <div className="modal-body">
-        <p>Are you sure, you want to delete the record?</p>
-      </div>
-      
-      <div className="modal-footer">
-        <button type="button" className="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button onClick={() => onDelete(data.id)}  type="button"  className="btn btn-primary">Yes</button>
-
-      </div>
-
-    </div>
-  </div>
-</div> */}
+       
 
         </>
     )

@@ -14,6 +14,7 @@ export default function Create() {
         checkbox
     })
     window.alert("Record saved successfully!!!");
+    
     window.location='./'
 }
 

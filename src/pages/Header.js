@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Menu } from 'semantic-ui-react'
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink  } from "react-router-dom";
 
 
 export default class Header extends Component {
@@ -14,20 +14,20 @@ export default class Header extends Component {
     return (
       <><Menu > 
         <Menu.Item 
-          name='editorials'
-          active={activeItem === 'editorials'}
+                  as={NavLink} to="/"
+          name='Create'
+          active={activeItem === 'Create'}
           onClick={this.handleItemClick}
         >
-          <Link className='nav' to="/">Create</Link>&nbsp;&nbsp;
 
         </Menu.Item>
 
         <Menu.Item
-          name='reviews'
-          active={activeItem === 'reviews'}
+         as={NavLink} to="/ReadRecord"
+          name='Read'
+          active={activeItem === 'Read'}
           onClick={this.handleItemClick}
         >
-             <Link className='nav' to="/ReadRecord">Read</Link>
 
         </Menu.Item>
 
