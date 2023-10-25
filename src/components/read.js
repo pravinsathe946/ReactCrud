@@ -11,6 +11,7 @@ useEffect(() => {
         setAPIData(response.data);
     })
 }, [])
+
 const setData = (data) => {
     let { id, firstName, lastName, checkbox } = data;
     localStorage.setItem('ID', id);

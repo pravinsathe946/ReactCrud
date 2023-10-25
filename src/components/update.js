@@ -22,6 +22,8 @@ const updateAPIData = () => {
          lastName,
          checkbox
 	})
+    window.alert("Record updated successfully!!!")
+     window .location="ReadRecord";
 }
     return (
         <div>
